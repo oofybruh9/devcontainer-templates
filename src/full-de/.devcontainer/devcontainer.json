@@ -1,0 +1,29 @@
+{
+    "name": "Full Desktop Environment",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VIEWER": "${templateOption:webViewer, default='noVNC'}",
+            "OS": "${templateOption:os, default='ubuntu'}",
+            "DESKTOP_ENV": "${templateOption:desktopEnv, default='xfce'}",
+            "VNC_PASSWORD": "${localEnv:VNC_PASSWORD, default=''}"
+        }
+    },
+    "runArgs": ["--privileged"],
+    "overrideCommand": false,
+    "remoteUser": "vscode",
+    "portsAttributes": {
+        "5901": {
+            "label": "VNC Server Port",
+            "onAutoForward": "notify"
+        },
+        "6080": {
+            "label": "noVNC Web Client Port",
+            "onAutoForward": "notify"
+        },
+        "8080": {
+            "label": "Guacamole Web Client Port",
+            "onAutoForward": "notify"
+        }
+    }
+}
