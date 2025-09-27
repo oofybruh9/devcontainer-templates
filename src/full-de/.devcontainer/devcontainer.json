@@ -3,10 +3,9 @@
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "VIEWER": "${templateOption:webViewer, default='noVNC'}",
-            "OS": "${templateOption:os, default='ubuntu'}",
-            "DESKTOP_ENV": "${templateOption:desktopEnv, default='xfce'}",
-            "VNC_PASSWORD": "${localEnv:VNC_PASSWORD, default=''}"
+            "VIEWER": "guacamole",
+            "DESKTOP_ENV": "mate",
+            "VNC_PASSWORD": "idkidk213"
         }
     },
     "runArgs": ["--privileged"],
@@ -21,7 +20,7 @@
             "label": "noVNC Web Client Port",
             "onAutoForward": "notify"
         },
-        "8080": {
+        "4822": {
             "label": "Guacamole Web Client Port",
             "onAutoForward": "notify"
         }

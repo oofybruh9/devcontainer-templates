@@ -2,7 +2,7 @@
     "id": "full-de",
     "version": "0.1.0",
     "name": "Full Desktop Environment",
-    "description": "A full-featured development container with a desktop environment, GUI apps, and a web-based viewer of your choice. Add your own customizations as needed.",
+    "description": "A full-featured development container with a desktop environment, GUI apps, and a web-based viewer of your choice running on Alpine Linux for minimal install. Add your own customizations as needed.",
     "documentationURL": "https://github.com/oofybruh9/devcontainer-templates",
     "publisher": "oofybruh9",
     "licenseURL": "https://github.com/oofybruh9/devcontainer-templates/blob/main/LICENSE",
@@ -24,23 +24,9 @@
             "default": "xfce",
             "enum": [
                 "xfce",
-                "lxde",
                 "mate",
                 "gnome",
                 "lxqt"
-            ]
-        },
-        "os":{
-            "label": "Base OS",
-            "description": "Choose the base operating system for the development container.",
-            "type": "string",
-            "default": "ubuntu",
-            "enum": [
-                "ubuntu",
-                "debian",
-                "arch",
-                "fedora",
-                "alpine"
             ]
         },
         "vncPassword": {
